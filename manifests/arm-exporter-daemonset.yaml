@@ -28,7 +28,9 @@ spec:
             cpu: 50m
             memory: 50Mi
       - args:
+        - --logtostderr
         - --secure-listen-address=$(IP):9243
+        - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
         - --upstream=http://127.0.0.1:9243/
         env:
         - name: IP
@@ -48,5 +50,6 @@ spec:
           requests:
             cpu: 10m
             memory: 20Mi
+      serviceAccountName: node-exporter
       nodeSelector:
-        beta.kubernetes.io/arch: arm64
+        beta.kubernetes.io/arch: arm

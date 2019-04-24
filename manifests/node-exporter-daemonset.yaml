@@ -62,10 +62,10 @@ spec:
         resources:
           limits:
             cpu: 20m
-            memory: 40Mi
+            memory: 20Mi
           requests:
             cpu: 10m
-            memory: 20Mi
+            memory: 5Mi
       hostNetwork: true
       hostPID: true
       nodeSelector:

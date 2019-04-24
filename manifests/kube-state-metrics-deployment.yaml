@@ -29,10 +29,10 @@ spec:
         resources:
           limits:
             cpu: 20m
-            memory: 40Mi
+            memory: 20Mi
           requests:
             cpu: 10m
-            memory: 20Mi
+            memory: 5Mi
       - args:
         - --logtostderr
         - --secure-listen-address=:9443
@@ -46,10 +46,10 @@ spec:
         resources:
           limits:
             cpu: 20m
-            memory: 40Mi
+            memory: 20Mi
           requests:
             cpu: 10m
-            memory: 20Mi
+            memory: 5Mi
       - args:
         - --host=127.0.0.1
         - --port=8081

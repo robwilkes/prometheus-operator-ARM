@@ -60,10 +60,10 @@ spec:
         resources:
           limits:
             cpu: 100m
-            memory: 150Mi
+            memory: 100Mi
           requests:
             cpu: 100m
-            memory: 150Mi
+            memory: 10Mi
       - command:
         - /pod_nanny
         - --container=kube-state-metrics
@@ -92,7 +92,7 @@ spec:
             memory: 30Mi
           requests:
             cpu: 10m
-            memory: 30Mi
+            memory: 5Mi
       nodeSelector:
         beta.kubernetes.io/os: linux
       securityContext:
